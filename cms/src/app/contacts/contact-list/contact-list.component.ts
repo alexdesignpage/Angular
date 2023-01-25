@@ -1,13 +1,12 @@
-import { Component } from '@angular/core';
-import { Contact } from '../contact.module';
-
+import { Component, EventEmitter, OnInit, Output } from '@angular/core';
+import { Contact } from '../contact.model';
 
 @Component({
   selector: 'app-contact-list',
   templateUrl: './contact-list.component.html',
   styleUrls: ['./contact-list.component.css'],
 })
-export class ContactListComponent{
+export class ContactListComponent implements OnInit {
   contacts: Contact[] = [
     new Contact(
       '1',
@@ -24,7 +23,13 @@ export class ContactListComponent{
       '../../assets/images/barzeer.jpg'
     ),
   ];
+  @Output() selectedContactEvent = new EventEmitter<Contact>();
+
   constructor() {}
 
   ngOnInit(): void {}
+
+  onSelected(contact: Contact) {
+    this.selectedContactEvent.emit(contact);
+  }
 }
