@@ -1,0 +1,16 @@
+{
+  "ExpandedNodes": [
+    "",
+    "\\src",
+    "\\src\\app",
+    "\\src\\app\\contacts",
+    "\\src\\app\\messages",
+    "\\src\\app\\messages\\message-edit",
+    "\\src\\app\\messages\\message-list",
+    "\\src\\app\\shared",
+    "\\src\\assets",
+    "\\src\\environments"
+  ],
+  "SelectedNode": "\\src\\app\\contacts\\MOCKCONTACTS.ts",
+  "PreviewInSolutionExplorer": false
+}
